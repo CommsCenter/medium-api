@@ -19,7 +19,7 @@ class Picture extends Endpoint
     public function search($keyword)
     {
         return $this->api->getApi('pictures/search?search=' . $keyword, [
-            RequestOptions::TIMEOUT => 15,
+            RequestOptions::TIMEOUT => 30,
         ])->getApiResponse('pictures');
     }
 
